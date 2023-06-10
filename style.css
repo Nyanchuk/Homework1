@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.header {
+  box-sizing: border-box;
+  border-bottom: #292727;
+  padding-top: 10px;
+  width: 100%;
+  background-image: url(img/Rectangle\ 1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 1024px;
+}
+.header_bottom {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+  transition: 0.3s linear;
+}
+.header_title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-top: 218px;
+  padding-bottom: 32px;
+  padding-right: 500px;
+}
+.header_p {
+  padding-right: 700px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-bottom: 45px;
+}
+.header_button {
+  border: 1px solid #9C0332;
+  box-sizing: border-box;
+  background: #9C0332;
+  border-radius: 30px;
+  width: 235px;
+  height: 48px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  transition: all 0.3s;
+}
+.header_button:hover {
+  transform: scale(1.05);
+  border: 1px #292727;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px #AFA4A6;
+}
+
+.main {
+  background-image: url(img/Rectangle\ 5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 556px;
+}
+
+.for {
+  padding-top: 128px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 32px;
+  transition: all 0.3s;
+}
+.for_item {
+  height: 300px;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #170202;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  transition: 0.3s linear;
+}
+.for_item_1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  background-image: url(img/Rectangle\ 6.jpg);
+  border-radius: 30px;
+  width: 379px;
+}
+.for_item_2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  background-image: url(img/Rectangle\ 7.jpg);
+  border-radius: 30px;
+  width: 379px;
+}
+.for_item_3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  background-image: url(img/Rectangle\ 8.jpg);
+  border-radius: 30px;
+  width: 379px;
+}
+.for_item:hover {
+  border: none;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 5px #AFA4A6;
+  border: 1px #292727;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px #AFA4A6;
+}/*# sourceMappingURL=style.css.map */
