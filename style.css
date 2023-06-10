@@ -69,7 +69,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  color: #000000;
+  color: #ffffff;
   transition: all 0.3s;
 }
 .header_button:hover {
@@ -98,54 +98,31 @@ body {
 }
 .for_item {
   height: 300px;
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 41px;
-  color: #170202;
+  width: 379px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 32px;
+  padding-bottom: 32px;
+  color: #FFFFFF;
+  box-sizing: border-box;
   transition: all 0.3s;
   transition: 0.3s linear;
+  border-radius: 16px;
 }
 .for_item_1 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  display: flex;
-  color: #FFFFFF;
-  box-sizing: border-box;
   background-image: url(img/Rectangle\ 6.jpg);
-  border-radius: 30px;
-  width: 379px;
 }
 .for_item_2 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  display: flex;
-  color: #FFFFFF;
-  box-sizing: border-box;
   background-image: url(img/Rectangle\ 7.jpg);
-  border-radius: 30px;
-  width: 379px;
 }
 .for_item_3 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  display: flex;
-  color: #FFFFFF;
-  box-sizing: border-box;
   background-image: url(img/Rectangle\ 8.jpg);
-  border-radius: 30px;
-  width: 379px;
 }
 .for_item:hover {
   border: none;
