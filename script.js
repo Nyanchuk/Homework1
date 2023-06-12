@@ -5,12 +5,12 @@ alert(a1)
 alert(b1)
 
 //#2
-let FirstPhone = 'Первый iPhone был представлен Стивом Джопсом 9 января 2007 года';
-alert(FirstPhone)
+let yearFirstPhone = 'Первый iPhone был представлен в 2007 году';
+alert(yearFirstPhone)
 
 //#3
-let FirstNameJS = 'Создателем языка JavaScript считается Брендан Эйх';
-alert(FirstNameJS)
+let firstNameJS = 'Создателем языка JavaScript считается Брендан Эйх';
+alert(firstNameJS)
 
 //#4
 let a4 = 10;
@@ -65,6 +65,7 @@ user.weight = 80;
 delete user['city of residence'];
 //#9.4
 let info = prompt( 'Какую информацию хотите узнать о пользователе?' )
-alert( `Его имя ${user.name}`);
-alert( `Его вес ${user.weight} кг`);
-
+alert( user[info]);
+//#10
+let yourName = prompt( 'Как ваше имя?' )
+alert(`Привет, ${yourName} !`)
