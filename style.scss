@@ -15,6 +15,8 @@
     padding-right: calc(50% - 600px);
   }
   
+  
+
   .header {
     box-sizing: border-box;
     border-bottom: #292727;
@@ -50,8 +52,6 @@
         font-weight: 300;
         font-size: 18px;
         line-height: 32px;
-        display: flex;
-        align-items: center;
         color: #FFFFFF;
         padding-bottom: 45px;
     }
@@ -83,16 +83,66 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 556px;
+    height: 2156px;
+
+    &_game1 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+      display: flex;
+      align-items: center;
+      color: #FFFFFF;
+      padding-top: 218px;
+      padding-bottom: 32px;
+      
+    }
+
+  &_img {
+    background-image: url(img/img1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 485px;
+    height: 333px;
+  }
+  &_img2 {
+    background-image: url(img/img2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 485px;
+    height: 333px;
+  }
+  &_p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 32px;
+      display: flex;
+      align-items: center;
+      color: #FFFFFF;        padding-bottom: 45px;
+  }
+  
   }
   .for {
-
     padding-top: 128px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     gap: 32px;
     transition: all 0.3s;
+
+    &_2 {
+      margin-top: 200px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 100px;
+    }
 
     &_item {
         height: 300px;
@@ -132,6 +182,45 @@
       box-shadow: 5px 5px 5px #AFA4A6;
     }
   }
-  
+  @media (max-width: 767px) {
+    .center {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    
+    .header {
+      max-width: 100%;
+      background-image: url(img/Rectangle\ 1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 735px;
+
+    &_title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    &_p {
+      width: 100%;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+  }
+    }
+  .for {
+    flex-wrap: wrap;
+  }
+}
   
   
