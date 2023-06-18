@@ -52,8 +52,6 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 32px;
-  display: flex;
-  align-items: center;
   color: #FFFFFF;
   padding-bottom: 45px;
 }
@@ -85,7 +83,46 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 556px;
+  height: 2156px;
+}
+.main_game1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-top: 218px;
+  padding-bottom: 32px;
+}
+.main_img {
+  background-image: url(img/img1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 485px;
+  height: 333px;
+}
+.main_img2 {
+  background-image: url(img/img2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 485px;
+  height: 333px;
+}
+.main_p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-bottom: 45px;
 }
 
 .for {
@@ -95,6 +132,14 @@ body {
   justify-content: center;
   gap: 32px;
   transition: all 0.3s;
+}
+.for_2 {
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 100px;
 }
 .for_item {
   height: 300px;
@@ -132,4 +177,43 @@ body {
   color: rgb(255, 255, 255);
   text-shadow: 0 0 20px rgb(255, 255, 255);
   box-shadow: 5px 5px 5px #AFA4A6;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    max-width: 100%;
+    background-image: url(img/Rectangle\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 735px;
+  }
+  .header_title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .header_p {
+    width: 100%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .for {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=style.css.map */
