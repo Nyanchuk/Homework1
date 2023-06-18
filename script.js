@@ -1,8 +1,8 @@
 //#3.1
-let password = 'пароль';
+let password = 1111;
 let unlock = Number(prompt( `Введите пароль` ));
 
-if (unlock === 1111) {
+if (unlock === password) {
     alert(`Пароль введен верно`)
 }
 else {
@@ -41,27 +41,27 @@ alert( a + b);
 let mothNumber = Number(prompt(`Введите номер месяца`));
 switch(mothNumber) {
 
-    case(12):
-    case(1):
-    case(2):
+    case 12:
+    case 1:
+    case 2:
     console.log(`Зимний месяц`)
     break;
 
-    case(3):
-    case(4):
-    case(5):
+    case 3:
+    case 4:
+    case 5:
     console.log(`Весенний месяц`)
     break;
     
-    case(6):
-    case(7):
-    case(8):
+    case 6:
+    case 7:
+    case 8:
     console.log(`Летний месяц`)
     break;
 
-    case(9):
-    case(10):
-    case(11):
+    case 9:
+    case 10:
+    case 11:
     console.log(`Осенний месяц`)
     break;
 
@@ -76,11 +76,11 @@ switch(mothNumber) {
 //#3.7
 let even = Number(prompt(`Пожалуйста, введите любое число`));
 switch(even % 2) {
-    case(0):
+    case 0:
         alert(`Четное число`)
         break;
 
-    case(1):
+    case 1:
         alert(`Нечетное число`)
         break;
 
@@ -93,11 +93,11 @@ switch(even % 2) {
 
 let clientOs =Number(prompt(`Для установки мобильного приложения введите "1" - для Android или "0" - для iOS`));
 switch (clientOs) {
-    case (1):
+    case 1:
         alert(`Установите версию приложения для Android по ссылке`);
         break;
     
-    case (0):
+    case 0:
         alert(`Установите версию приложения для iOS по ссылке`);
         break;
         
@@ -110,33 +110,21 @@ switch (clientOs) {
 let client = Number(prompt(`Для установки мобильного приложения введите: "1" - для Android или "0" - для iOS`));
 let clientDeviceYear = Number(prompt(`Далее определим год выпуска вашего устройства: "1" - ранее 2015 или "0" - позднее 2015`))
 
-switch(client && clientDeviceYear) {
-    case ( 1 && 1):
-        alert(`Установите облегченную версию приложения для Android по ссылке`)
-        break;
-
-    case ( 0 && 1):
-        alert(`Установите облегченную версию приложения для iOS по ссылке`)
-        break;
-
-    case ( 1 && 0):
-        alert(`Установите версию приложения для Android по ссылке`)
-        break;
-
-    case ( 0 && 0):
-        alert(`Установите версию приложения для iOS по ссылке`)
-        break;
-
-    default:
-        alert(`Неправильный ввод!`)
-        break;
-    }
-
-
-
-
-
-
+if (client == 1 && clientDeviceYear == 1) {
+    alert(`Установите облегченную версию приложения для Android по ссылке`)
+}
+else if (client == 0 && clientDeviceYear == 1) {
+    alert(`Установите облегченную версию приложения для iOS по ссылке`)
+}
+else if (client == 1 && clientDeviceYear == 0) {
+    alert(`Установите версию приложения для Android по ссылке`) 
+}
+else if (client == 0 && clientDeviceYear == 0) {
+    alert(`Установите версию приложения для iOS по ссылке`)
+}
+else {
+    alert(`Неправильный ввод!`)
+}
 
 //------------------------------------------------------
 //#1
