@@ -1,3 +1,117 @@
+//Первая игра
+function seasons() {
+    let month =Number(prompt(`Введите номер месяца и мы посмотрим к какому сезону года он относится!`));
+
+    if (month == 1 || month == 2 || month == 12){
+        alert(`Зимний месяц`);
+    } else if (month >= 3 && month <= 5) {
+        alert(`Весенний месяц`);
+    } else if (month >= 6 && month <= 8) {
+        alert(`Летний месяц`);
+    } else if (month >= 9 && month <= 11) {
+        alert(`Осенний месяц`);
+    } else {
+        alert(`Такого месяца не существует!`);
+    }
+}
+
+//#5.1
+function min(a5, b5) {
+    if (a5 < b5) {
+        return a5;
+    } else {
+        return b5;
+    }
+}
+
+console.log(min(4,  8));
+console.log(min(9,  2));
+console.log(min(5,  5));
+
+//#5.2
+function checkNumber(a5) {
+    if (a5 % 2 === 0) {
+        return (`Четное число!`)
+    } else if (a5 % 2 === 1) {
+        return (`Нечетное число!`)
+    } else {
+        return (`Нет числового значения!`)
+    }
+}
+
+ console.log(checkNumber(7294723));
+ console.log(checkNumber(`sjviodsj`));
+ console.log(checkNumber(83774334));
+
+//#5.3
+function doublNumber(a5) {
+    return a5 ** 2
+}
+
+console.log(doublNumber(11988));
+console.log(doublNumber(-13));
+console.log(doublNumber(`hello`));
+
+//#5.4
+let year = prompt(`Сколько вам лет?`)
+
+function years(year) {
+    if (year > 0 && year <= 12) {
+        return (`Привет, друг!`)
+    } else if (year >= 13) {
+        return (`Добро пожаловать!`)
+    } else {
+        return (`Нет числового значения!`)
+    }  
+}
+alert(years(year));
+
+//#5.5
+let numA = Number(prompt(`Введите первое число`));
+let numB = Number(prompt(`Введите второе число`));
+
+function mult(numA, numB) {
+    if (isNaN(numA) || isNaN(numB)) {
+        return (`Одно или оба значения не являются числом`)
+    } else {
+        let mult = numA * numB;
+        return (`Произведение чисел равно ${mult}`) 
+    }
+}
+alert(mult(numA, numB));
+
+//#5.6
+let num6 = Number(prompt(`Введите число!`));
+
+function numberCube(num6) {
+    if (isNaN(num6)) {
+        return (`Переданный параметр не является числом!`)
+    } else {
+        let mult = num6 ** 3;
+        return(`${num6} в кубе равняется ${mult}` )
+    }
+}
+alert(numberCube(num6))
+
+//#5.7
+let circle1 = prompt(`Введите радиус первой окружности!`);
+let circle2 = prompt(`Введите радиус второй окружности!`);
+
+function radius1(circle1) {
+    let getArea = 3.14 * (circle1 ** 2);
+    let getPerimeter = 3.14 * 2 * circle1;
+    return(`Площадь первого круга равняется ${getArea}, а длинна окружности ${getPerimeter}`)
+}
+alert(radius1(circle1))
+
+function radius2(circle2) {
+    let getAreaTwo = 3.14 * (circle2 ** 2);
+    let getPerimeterTwo = 3.14 * 2 * circle2;
+    return(`Площадь второго круга равняется ${getAreaTwo}, а длинна окружности ${getPerimeterTwo}`)
+}
+alert(radius2(circle2))
+
+//------------------------------------------------------
 //#4.1
 let i1 = 1;
 let n1 = 2;
@@ -38,15 +152,6 @@ alert(`${i5}`)
 for (i6 = 1; i6 < 31;i6 +=7 ) { 
     alert(`Сегодня пятница, ${i6} число. Необходимо подготовить отчет!`) 
 }
-
-
-
-
-
-
-
-
-
 
 //------------------------------------------------------
 //#3.1
