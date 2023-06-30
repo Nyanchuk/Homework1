@@ -1,91 +1,88 @@
-//Первая игра
-function seasons() {
-    let month =Number(prompt(`Введите номер месяца и мы посмотрим к какому сезону года он относится!`));
+// //Первая игра
+// function seasons() {
+//     let month =Number(prompt(`Введите номер месяца и мы посмотрим к какому сезону года он относится!`));
 
-    if (month == 1 || month == 2 || month == 12){
-        alert(`Зимний месяц`);
-    } else if (month >= 3 && month <= 5) {
-        alert(`Весенний месяц`);
-    } else if (month >= 6 && month <= 8) {
-        alert(`Летний месяц`);
-    } else if (month >= 9 && month <= 11) {
-        alert(`Осенний месяц`);
-    } else {
-        alert(`Такого месяца не существует!`);
-    }
+//     if (month == 1 || month == 2 || month == 12){
+//         alert(`Зимний месяц`);
+//     } else if (month >= 3 && month <= 5) {
+//         alert(`Весенний месяц`);
+//     } else if (month >= 6 && month <= 8) {
+//         alert(`Летний месяц`);
+//     } else if (month >= 9 && month <= 11) {
+//         alert(`Осенний месяц`);
+//     } else {
+//         alert(`Такого месяца не существует!`);
+//     }
+// }
+
+// //------------------------------------------------------
+// //#6.1
+// const numbers1 = [1, 5, 4, 10, 0, 3];
+// for (let i = 0; i < numbers1.length; i++) {
+// 	if (numbers1[i] == 10) break;
+// 	console.log(numbers1[i]);
+// }
+
+// //#6.2
+// const numbers2 = [1, 5, 4, 10, 0, 3];
+// console.log(numbers2.indexOf(4));
+
+// //#6.3
+// let numbers3 = [1, 3, 5, 10, 20];
+// numbers3 = numbers3.join(' ');
+// console.log(numbers3);
+
+// //#6.4
+// let numbers4 = [];
+// for (let i = 0; i < 3; i++) {
+//     numbers4[i] = [];
+//     for (let j = 0; j < 3; j++) {
+// 		numbers4[i].push(1);
+// 	}
+// }
+// console.log(numbers4);
+
+// //#6.5
+// let numbers5 = [1, 1, 1];
+// for (let j = 0; j < 3; j++) {
+//     numbers5.push(2);
+// }
+// console.log(numbers5);
+
+// //#6.6
+// let numbers6 = [9, 8, 7, `a`, 6, 5];
+// numbers6 = numbers6.sort();
+// numbers6.pop();
+// console.log(numbers6);
+
+// //#6.7
+// let numbers7 = [9, 8, 7, 6, 5];
+// const qua = Number(prompt(`Угадай число массива`)); 
+// 	if (numbers7.includes(qua)) {
+// 	    alert(`Угадал`)
+//     } else {
+//         alert(`Не угадал`)
+//     }
+
+// //#6.8
+// let numbers8 = 'abcdef';
+// numbers8 = numbers8.split('');
+// numbers8 = numbers8.reverse();
+// numbers8 = numbers8.join('');
+// console.log(numbers8);
+
+// //#6.9
+// let numbers9 = [[1, 2, 3], [4, 5, 6]];
+// numbers9 = numbers9.flat();
+// console.log(numbers9);
+
+//#6.10 
+const numbers10 = [1, 3, 5, 6, 8, 2];
+let sum = 0;
+for(let i = 0; i < numbers10.length; i++) {
+    sum += numbers10[i]
+    console.log(sum);
 }
-
-//------------------------------------------------------
-//#6.1
-const numbers1 = [1, 5, 4, 10, 0, 3];
-for (let i = 0; i < numbers1.length; i++) {
-	if (numbers1[i] == 10) break;
-	console.log(numbers1[i]);
-}
-
-//#6.2
-const numbers2 = [1, 5, 4, 10, 0, 3];
-console.log( numbers2.indexOf(4));
-
-//#6.3
-let numbers3 = [1, 3, 5, 10, 20];
-numbers3 = numbers3.join(' ');
-console.log(numbers3);
-
-//#6.4
-let numbers4 = [];
-for (let i = 0; i < 3; i++) {
-    numbers4[i] = [];
-    for (let j = 0; j < 3; j++) {
-		numbers4[i].push(1);
-	}
-}
-console.log(numbers4);
-
-//#6.5
-let numbers5 = [1, 1, 1];
-for (let j = 0; j < 3; j++) {
-    numbers5.push(2);
-}
-console.log(numbers5);
-
-//#6.6
-let numbers6 = [9, 8, 7, `a`, 6, 5];
-numbers6 = numbers6.sort();
-numbers6.pop();
-console.log(numbers6);
-
-//#6.7
-let numbers7 = [9, 8, 7, 6, 5];
-const qua = Number(prompt(`Угадай число массива`)); 
-	if (numbers7.includes(qua)) {
-	    alert(`Угадал`)
-    } else {
-        alert(`Не угадал`)
-    }
-
-//#6.8
-let numbers8 = 'abcdef';
-numbers8 = numbers8.split('');
-numbers8 = numbers8.reverse();
-numbers8 = numbers8.join('');
-console.log(numbers8);
-
-//#6.9
-let numbers9 = [[1, 2, 3], [4, 5, 6]];
-numbers9 = numbers9.flat();
-console.log(numbers9);
-
-//#6.10 ...Я не поняла как делать циклом...
-let numbers10 = [1, 3, 5, 6, 8, 2];
-function count(numbers10) {
-    let sum = 0;
-    numbers10.forEach(function(item){
-        sum += item
-    })
-    return sum;
-}
-console.log(count(numbers10));
 
 //#6.11
 function mass11(arr11) {
@@ -95,21 +92,25 @@ const numbers11 = [4, 5, 8, 10];
 console.log(mass11(numbers11))
 
 //#6.12
-function mass12(arr12) {
-    for (let i = 0; i < arr12.length. Number; i++) {
-        for (let j = 0; j < array.length; j++) {
-
-        }
-  }
+function numbers12(arr12) {
+    let result1 = arr12.map((item) => {
+        return item.length;
+      });
+      console.log(result1)
 }
-  const numbers12 = [`lost`, `beautiful`, `sun`, `4 jobs`, ``];
-  console.log(mass12(numbers12))
+numbers12([`lost`, `beautiful`, `sun`, `4 jobs`, ``]);
+
+// ...Без функции...
+// let numbers12 = [`lost`, `beautiful`, `sun`, `4 jobs`, ``];
+// let result = numbers12.map((item) => {
+//   return item.length;
+// });
+// console.log(result)
 
 //#6.13
 function filterPositive(array) {
-    for(let i = 0; i < arr12.length. Number; i++) {
-        if (array[i] > 0);
-    }
+    result12 = array.filter(i => i < 0)
+    console.log(result12)
   }
   
   filterPositive([-1, 0, 5, -10, 56]); 
