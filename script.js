@@ -1,21 +1,138 @@
-// //Первая игра
-// function seasons() {
-//     let month =Number(prompt(`Введите номер месяца и мы посмотрим к какому сезону года он относится!`));
+//Первая игра
+function seasons() {
+    let month =Number(prompt(`Введите номер месяца и мы посмотрим к какому сезону года он относится!`));
 
-//     if (month == 1 || month == 2 || month == 12){
-//         alert(`Зимний месяц`);
-//     } else if (month >= 3 && month <= 5) {
-//         alert(`Весенний месяц`);
-//     } else if (month >= 6 && month <= 8) {
-//         alert(`Летний месяц`);
-//     } else if (month >= 9 && month <= 11) {
-//         alert(`Осенний месяц`);
-//     } else {
-//         alert(`Такого месяца не существует!`);
-//     }
-// }
+    if (month == 1 || month == 2 || month == 12){
+        alert(`Зимний месяц`);
+    } else if (month >= 3 && month <= 5) {
+        alert(`Весенний месяц`);
+    } else if (month >= 6 && month <= 8) {
+        alert(`Летний месяц`);
+    } else if (month >= 9 && month <= 11) {
+        alert(`Осенний месяц`);
+    } else {
+        alert(`Такого месяца не существует!`);
+    }
+}
+//------------------------------------------------------
+//#7.1
+console.log('js'.toUpperCase());
 
-// //------------------------------------------------------
+//#7.2
+function searchStart(array, item) {
+    array.forEach((product) => {
+
+        if (product.toLowerCase().includes(item.toLowerCase())) {
+            console.log(product.split(' '));
+        }
+    })
+}
+
+searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); 
+searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'); 
+searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'); 
+
+//#7.3
+let x3 = 32.58884;
+//До меньшего целого
+console.log(Math.floor(x3));
+//До большего целого
+console.log(Math.ceil(x3));
+//До ближайшего целого
+console.log(Math.round(x3));
+
+//#7.4
+console.log(Math.max(52, 53, 49, 77, 21, 32));
+console.log(Math.min(52, 53, 49, 77, 21, 32));
+
+//#7.5
+function getRandomInt(minValue, maxValue) {
+    return Math.round(Math.random() * (maxValue - minValue)) + minValue;;
+}
+
+console.log(getRandomInt(1, 10));
+
+//#7.6
+function getRandomArrNumbers(item) {
+    let arr = [];
+    let item2 = item / 2;
+    item2 = Math.floor(item2);
+    console.log(item2);
+        for(let i = 0; i < item2; i++) {
+            let j = Math.random() * item;
+            arr[arr.length] = j;
+            return arr;
+        } 
+}
+
+console.log(getRandomArrNumbers(7));
+console.log(getRandomArrNumbers(12));
+
+//#7.7
+function getRandomInt(minValue, maxValue) {
+    return Math.round(Math.random() * (maxValue - minValue)) + minValue;
+}
+
+console.log(getRandomInt(1, 10));
+console.log(getRandomInt(0, 20));
+console.log(getRandomInt(-100, 0));
+
+//#7.8
+let currentDate = new Date();
+console.log(currentDate);
+
+//#7.9
+let newDate = new Date();
+newDate.setDate(newDate.getDate() + 73);
+console.log(newDate);
+
+//#7.10
+function date(newDate) {
+    const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    let fullDate = "Дата: " + newDate.getDate() + " " + months[newDate.getMonth()] + " " + newDate.getFullYear() + "," + " " + days[newDate.getDay()];
+    console.log(fullDate)
+    let fullHour = "Время: "+ " " + newDate.getHours() + " часов"+ "," + " " + newDate.getMinutes() + " минут"+ "," + " " + newDate.getSeconds() + " секунд";
+    console.log(fullHour)
+}
+
+date(new Date())
+
+//#7.11 ВТОРАЯ ИГРА
+function word() {
+    let arrGame = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+    arrGame = arrGame.sort(() => Math.random() - 0.5);
+    alert(arrGame)
+    arrGame = arrGame.map(e => e.toLowerCase());
+
+    let question1 = prompt(`Чему равнялся первый элемент массива?`)
+    question1 = question1.toLowerCase();
+        
+        if (question1 === arrGame[0]){
+            alert(`Угадал`);
+        } else {
+            alert(`Не угадал`);
+        }
+    
+    let question2 = prompt(`Чему равнялся последний элемент массива?`)
+    question2 = question2.toLowerCase();
+
+        if (question2 === arrGame[6]){
+            alert(`Угадал`);
+        } else {
+            alert(`Не угадал`);
+        }
+
+    if (question1 === arrGame[0] && question2 === arrGame[6]) {
+        alert(`Поздравляем! Вы угадали оба элемента!`);
+    } else if (question1 === arrGame[0] || question2 == arrGame[6]) {
+        alert(`Вы были близки к победе!`);
+    } else {
+        alert(`К сожалению, вы ответили неверно!`);
+    }
+}
+
+// ------------------------------------------------------
 // //#6.1
 // const numbers1 = [1, 5, 4, 10, 0, 3];
 // for (let i = 0; i < numbers1.length; i++) {
@@ -76,29 +193,29 @@
 // numbers9 = numbers9.flat();
 // console.log(numbers9);
 
-//#6.10 
-const numbers10 = [1, 3, 5, 6, 8, 2];
-let sum = 0;
-for(let i = 0; i < numbers10.length; i++) {
-    sum += numbers10[i]
-    console.log(sum);
-}
+// //#6.10 
+// const numbers10 = [1, 3, 5, 6, 8, 2];
+// let sum = 0;
+// for(let i = 0; i < numbers10.length; i++) {
+//     sum += numbers10[i]
+//     console.log(sum);
+// }
 
-//#6.11
-function mass11(arr11) {
-    return arr11.map(item => item ** 2);
-}
-const numbers11 = [4, 5, 8, 10];
-console.log(mass11(numbers11))
+// //#6.11
+// function mass11(arr11) {
+//     return arr11.map(item => item ** 2);
+// }
+// const numbers11 = [4, 5, 8, 10];
+// console.log(mass11(numbers11))
 
-//#6.12
-function numbers12(arr12) {
-    let result1 = arr12.map((item) => {
-        return item.length;
-      });
-      console.log(result1)
-}
-numbers12([`lost`, `beautiful`, `sun`, `4 jobs`, ``]);
+// //#6.12
+// function numbers12(arr12) {
+//     let result1 = arr12.map((item) => {
+//         return item.length;
+//       });
+//       console.log(result1)
+// }
+// numbers12([`lost`, `beautiful`, `sun`, `4 jobs`, ``]);
 
 // ...Без функции...
 // let numbers12 = [`lost`, `beautiful`, `sun`, `4 jobs`, ``];
@@ -107,14 +224,14 @@ numbers12([`lost`, `beautiful`, `sun`, `4 jobs`, ``]);
 // });
 // console.log(result)
 
-//#6.13
-function filterPositive(array) {
-    result12 = array.filter(i => i < 0)
-    console.log(result12)
-  }
+// //#6.13
+// function filterPositive(array) {
+//     result12 = array.filter(i => i < 0)
+//     console.log(result12)
+//   }
   
-  filterPositive([-1, 0, 5, -10, 56]); 
-  filterPositive([-25, 25, 0, -1000, -2]);
+//   filterPositive([-1, 0, 5, -10, 56]); 
+//   filterPositive([-25, 25, 0, -1000, -2]);
 
 // //------------------------------------------------------
 // //#5.1
