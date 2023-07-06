@@ -8,14 +8,18 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta content="width=767" name="viewport" id="viewport">
 </head>
 <body>
-    <header>
-        <div class="header center">
+    
+    <header class="header center">
+        <div>
             <h1 class="header_title">Добро пожаловать на мой сайт !</h1>
             <p class="header_p">Вам предстоит пройти несколько увлекательных игр. Если готов нажимай поехали и приступай</p>
+            <div class="header_button_dop">
             <button class="header_button">Поехали!</button>
+            </div>
         </div>
     </header>
     <main class="main center">
@@ -34,16 +38,15 @@
                     <div class="main_img"></div>
                 </div>
             </div>
-
-            <div class="for_2">
-                <div>
-                    <div class="main_img2"></div>
-                </div>
-                <div class="main_info">
-                    <h2 class="main_game1">Запомни слова</h2>
-                    <p class="main_p">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить</p>
-                    <button onclick="word();" class="header_button">Играть</button>
-                </div>
+            <div class="for_3"> 
+                    <div>
+                        <div class="main_img2"></div>
+                    </div>
+                    <div class="main_info">
+                        <h2 class="main_game1">Запомни слова</h2>
+                        <p class="main_p">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить</p>
+                        <button onclick="word();" class="header_button">Играть</button>
+                    </div>
             </div>
     </main>
 <script src="script.js"></script>

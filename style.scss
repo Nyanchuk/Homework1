@@ -15,8 +15,6 @@
     padding-right: calc(50% - 600px);
   }
   
-  
-
   .header {
     box-sizing: border-box;
     border-bottom: #292727;
@@ -123,7 +121,8 @@
       line-height: 32px;
       display: flex;
       align-items: center;
-      color: #FFFFFF;        padding-bottom: 45px;
+      color: #FFFFFF;       
+      padding-bottom: 45px;
   }
   
   }
@@ -142,6 +141,14 @@
       align-items: flex-end;
       justify-content: flex-start;
       gap: 100px;
+    }
+    &_3 {
+      margin-top: 200px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 150px;
     }
 
     &_item {
@@ -182,45 +189,132 @@
       box-shadow: 5px 5px 5px #AFA4A6;
     }
   }
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .center {
       padding-left: 16px;
       padding-right: 16px;
     }
+
+    .main {
+      height: auto;
+      width: 100%;
+      padding-left: 32px;
+      padding-right: 32px;
+
+      &_game1 {
+        padding-left: 92px;
+        font-size: 64px;
+        text-align: center;
+      }
+
+      &_img {
+        background-image: url(img/img1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 700px;
+        height: 500px;
+      }
+      &_img2 {
+        background-image: url(img/img2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 700px;
+        height: 500px;
+      }
+
+      &_p {
+        padding-top: 25px;
+        padding-bottom: 64px;
+        font-weight: 300;
+        margin-left: 32px;
+        margin-right: 32px;
+        font-size: 24px;
+        line-height: 42px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        color: #FFFFFF;  
+        }
+      
+    }
     
     .header {
-      max-width: 100%;
-      background-image: url(img/Rectangle\ 1.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 735px;
+      height: 900px;
 
     &_title {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 39px;
+        padding-top: 160px;
         display: flex;
         align-items: center;
         text-align: center;
+        padding-right: 0px; 
     }
     &_p {
-      width: 100%;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 22px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-  }
+        margin-left: 64px;
+        margin-right: 64px;
+        font-size: 24px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        padding-right: 0px; 
     }
-  .for {
-    flex-wrap: wrap;
-  }
+    &_button {
+      margin-left: 150px;
+      border: 1px solid #9C0332;
+      box-sizing: border-box;
+      background: #9C0332;
+      border-radius: 30px;
+      width: 400px;
+      height: 64px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+      color: #ffffff;
+      transition: all 0.3s;
+    }
+    &_button_dop {
+      padding-left: 20px;
+    }
+    }
+    
+    .for {
+      flex-wrap: wrap;
+      padding-top: 0px;
+      gap: 64px;
+
+      &_2 {
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+      }
+     
+      &_3 {
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+        gap: 150px;
+        padding-bottom: 64px;
+      }
+
+      &_item {
+        height: 500px;
+        width: 100%;
+        font-size: 40px;
+        padding-left: 64px;
+        padding-bottom: 64px;
+        border-radius: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
 }
-  
-  
+//Добавляет мобильную версию
+// <meta content="width=1180" name="viewport" id="viewport">

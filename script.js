@@ -60,9 +60,10 @@ function getRandomArrNumbers(item) {
     console.log(item2);
         for(let i = 0; i < item2; i++) {
             let j = Math.random() * item;
+            j = Math.round(j)
             arr[arr.length] = j;
-            return arr;
         } 
+    return arr;
 }
 
 console.log(getRandomArrNumbers(7));
