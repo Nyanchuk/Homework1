@@ -63,7 +63,7 @@ const people1 = [
 
 function isPositive(num) {
     if(num > 0) {
-        return true;
+        return num > 0;
     } else {
         return false
     }
@@ -71,8 +71,8 @@ function isPositive(num) {
 
 function isMale(item) {
     
-    if (item.gender = 'male') {
-        return true;
+    if (item.gender === 'male') {
+        return item.gender === 'male';
     } else {
         return false;
     }
@@ -81,7 +81,7 @@ function isMale(item) {
 function filter(arr, ruleFunction) {
     let result = [];
     for (let i = 0; i < arr.length; i++) {
-        if (ruleFunction(arr[i]) === true) {
+        if (ruleFunction(arr[i])) { 
             result.push(arr[i]);}
     }
     return result; 
@@ -130,9 +130,7 @@ function sayHi (name) {
     console.log(`Привет, ${name}!`);
 }
 
-setTimeout(() => sayHi('Глеб'), 2000)
-delayForSecond()
-
+delayForSecond(() => sayHi('Глеб'))
 
 //------------------------------------------------------
 // //#7.1
