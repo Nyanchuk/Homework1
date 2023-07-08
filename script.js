@@ -1,4 +1,4 @@
-//Первая игра
+//ПЕРВАЯ ИГРА
 function seasons() {
     let month =Number(prompt(`Введите номер месяца и мы посмотрим к какому сезону года он относится!`));
 
@@ -14,92 +14,8 @@ function seasons() {
         alert(`Такого месяца не существует!`);
     }
 }
-//------------------------------------------------------
-//#7.1
-console.log('js'.toUpperCase());
 
-//#7.2
-function searchStart(array, item) {
-    array.forEach((product) => {
-
-        if (product.toLowerCase().includes(item.toLowerCase())) {
-            console.log(product.split(' '));
-        }
-    })
-}
-
-searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); 
-searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'); 
-searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'); 
-
-//#7.3
-let x3 = 32.58884;
-//До меньшего целого
-console.log(Math.floor(x3));
-//До большего целого
-console.log(Math.ceil(x3));
-//До ближайшего целого
-console.log(Math.round(x3));
-
-//#7.4
-console.log(Math.max(52, 53, 49, 77, 21, 32));
-console.log(Math.min(52, 53, 49, 77, 21, 32));
-
-//#7.5
-function getRandomInt(minValue, maxValue) {
-    return Math.round(Math.random() * (maxValue - minValue)) + minValue;;
-}
-
-console.log(getRandomInt(1, 10));
-
-//#7.6
-function getRandomArrNumbers(item) {
-    let arr = [];
-    let item2 = item / 2;
-    item2 = Math.floor(item2);
-    console.log(item2);
-        for(let i = 0; i < item2; i++) {
-            let j = Math.random() * item;
-            j = Math.round(j)
-            arr[arr.length] = j;
-        } 
-    return arr;
-}
-
-console.log(getRandomArrNumbers(7));
-console.log(getRandomArrNumbers(12));
-
-//#7.7
-function getRandomInt(minValue, maxValue) {
-    return Math.round(Math.random() * (maxValue - minValue)) + minValue;
-}
-
-console.log(getRandomInt(1, 10));
-console.log(getRandomInt(0, 20));
-console.log(getRandomInt(-100, 0));
-
-//#7.8
-let currentDate = new Date();
-console.log(currentDate);
-
-//#7.9
-let newDate = new Date();
-newDate.setDate(newDate.getDate() + 73);
-console.log(newDate);
-
-//#7.10
-function date(newDate) {
-    const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-    const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-    let fullDate = "Дата: " + newDate.getDate() + " " + months[newDate.getMonth()] + " " + newDate.getFullYear() + "," + " " + days[newDate.getDay()];
-    console.log(fullDate)
-    let fullHour = "Время: "+ " " + newDate.getHours() + " часов"+ "," + " " + newDate.getMinutes() + " минут"+ "," + " " + newDate.getSeconds() + " секунд";
-    console.log(fullHour)
-}
-
-date(new Date())
-
-//#7.11 ВТОРАЯ ИГРА
+//ВТОРАЯ ИГРА
 function word() {
     let arrGame = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
     arrGame = arrGame.sort(() => Math.random() - 0.5);
@@ -132,6 +48,178 @@ function word() {
         alert(`К сожалению, вы ответили неверно!`);
     }
 }
+//------------------------------------------------------
+//#8.1
+const people1 = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+ ];
+ 
+ console.log(people1.sort((a, b) => a.age > b.age ? 1 : -1));
+
+//#8.2 
+
+function isPositive(num) {
+    if(num > 0) {
+        return true;
+    } else {
+        return false
+    }
+}
+
+function isMale(item) {
+    
+    if (item.gender = 'male') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function filter(arr, ruleFunction) {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (ruleFunction(arr[i]) === true) {
+            result.push(arr[i]);}
+    }
+    return result; 
+        
+}
+ 
+console.log(filter([3, -4, 1, 9], isPositive)); // Должен выводить [3, 1, 9]
+    
+const people = [
+   {name: 'Глеб', gender: 'male'},
+   {name: 'Анна', gender: 'female'},
+   {name: 'Олег', gender: 'male'},
+   {name: 'Оксана', gender: 'female'}
+];
+    
+console.log(filter(people, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]
+
+
+
+//#8.3
+let date = new Date();
+let timerId = setInterval(() => console.log(`${date}`), 3000);
+
+setTimeout(() => { clearInterval(timerId); console.log('30 секунд прошло'); }, 31000);
+
+//#8.4
+function delayForSecond(callback) {
+    setTimeout(callback, 1000);
+  callback();
+}
+
+delayForSecond(function () {
+  console.log('Привет, Глеб!');
+})
+
+//#8.5
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+				if(cb) { 	cb(); }
+
+    }, 1000)
+}
+
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
+
+setTimeout(() => sayHi('Глеб'), 2000)
+delayForSecond()
+
+
+//------------------------------------------------------
+// //#7.1
+// console.log('js'.toUpperCase());
+
+// //#7.2
+// function searchStart(array, item) {
+//     array.forEach((product) => {
+
+//         if (product.toLowerCase().includes(item.toLowerCase())) {
+//             console.log(product.split(' '));
+//         }
+//     })
+// }
+
+// searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); 
+// searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру'); 
+// searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино'); 
+
+// //#7.3
+// let x3 = 32.58884;
+// //До меньшего целого
+// console.log(Math.floor(x3));
+// //До большего целого
+// console.log(Math.ceil(x3));
+// //До ближайшего целого
+// console.log(Math.round(x3));
+
+// //#7.4
+// console.log(Math.max(52, 53, 49, 77, 21, 32));
+// console.log(Math.min(52, 53, 49, 77, 21, 32));
+
+// //#7.5
+// function getRandomInt(minValue, maxValue) {
+//     return Math.round(Math.random() * (maxValue - minValue)) + minValue;;
+// }
+
+// console.log(getRandomInt(1, 10));
+
+// //#7.6
+// function getRandomArrNumbers(item) {
+//     let arr = [];
+//     let item2 = item / 2;
+//     item2 = Math.floor(item2);
+//     console.log(item2);
+//         for(let i = 0; i < item2; i++) {
+//             let j = Math.random() * item;
+//             j = Math.round(j)
+//             arr[arr.length] = j;
+//         } 
+//     return arr;
+// }
+
+// console.log(getRandomArrNumbers(7));
+// console.log(getRandomArrNumbers(12));
+
+// //#7.7
+// function getRandomInt(minValue, maxValue) {
+//     return Math.round(Math.random() * (maxValue - minValue)) + minValue;
+// }
+
+// console.log(getRandomInt(1, 10));
+// console.log(getRandomInt(0, 20));
+// console.log(getRandomInt(-100, 0));
+
+// //#7.8
+// let currentDate = new Date();
+// console.log(currentDate);
+
+// //#7.9
+// let newDate = new Date();
+// newDate.setDate(newDate.getDate() + 73);
+// console.log(newDate);
+
+// //#7.10
+// function date(newDate) {
+//     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+//     const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+//     let fullDate = "Дата: " + newDate.getDate() + " " + months[newDate.getMonth()] + " " + newDate.getFullYear() + "," + " " + days[newDate.getDay()];
+//     console.log(fullDate)
+//     let fullHour = "Время: "+ " " + newDate.getHours() + " часов"+ "," + " " + newDate.getMinutes() + " минут"+ "," + " " + newDate.getSeconds() + " секунд";
+//     console.log(fullHour)
+// }
+
+// date(new Date())
+
+
 
 // ------------------------------------------------------
 // //#6.1
